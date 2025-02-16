@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 
 
 
-//https://api.spoonacular.com/recipes/complexSearch?query=burger&apiKey=3edbbb67feeb4fe5b864699f4ca13afb
 
 function Search({setfoodData}) {
     const [query, setQuery] = useState("");
