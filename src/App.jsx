@@ -1,5 +1,6 @@
 import { useState } from "react"
 import Search from "./components/search"
+import Foodlist from "./components/list"
 
 
 
@@ -10,12 +11,7 @@ function App() {
   return (
     <div className="App">
     <Search setfoodData={setfoodData} />
-    {foodData.map((food)=>(
-      <div>
-      <h4>{food.title}</h4>
-      <img src={food.image} />
-      </div>
-    ))}
+    <Foodlist foodData={foodData}/>
     </div>
   )
 }
