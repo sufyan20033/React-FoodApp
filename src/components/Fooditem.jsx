@@ -1,15 +1,15 @@
-import React from 'react'
+import React from 'react';
+import './Fooditem.css';
 
-function Fooditem({fooddata}) {
+function Fooditem({ fooddata }) {
   return (
-    <div>
-        <div>
-        <h4>{fooddata.title}</h4>
-        <img src={fooddata.image} /><br></br>
-        <button>View Reciepe</button>
-        </div>
+    <div className="food-item">
+      <h4>{fooddata.title}</h4>
+      <img src={fooddata.image} alt={fooddata.title} />
+      <br />
+      <button>View Recipe</button>
     </div>
-  )
+  );
 }
 
 export default Fooditem;

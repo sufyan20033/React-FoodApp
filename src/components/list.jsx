@@ -6,7 +6,7 @@ function Foodlist({foodData}) {
     <div>
         
     {foodData.map((food)=>(
-        <Fooditem fooddata ={food}/>
+        <Fooditem fooddata ={food} key={food.title}/>
       ))}
     </div>
   )

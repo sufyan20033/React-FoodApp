@@ -1,6 +1,10 @@
 import { useState } from "react"
 import Search from "./components/search"
 import Foodlist from "./components/list"
+import Navbar from "./components/Navbar"
+import Container from "./components/Container"
+import Innercontainer from "./components/innercontainer"
+
 
 
 
@@ -10,8 +14,14 @@ function App() {
 
   return (
     <div className="App">
-    <Search setfoodData={setfoodData} />
-    <Foodlist foodData={foodData}/>
+      <Navbar setfoodData={setfoodData}/>
+    {/* <Search setfoodData={setfoodData} /> */}
+    <Container>
+      <Innercontainer>
+
+      <Foodlist foodData={foodData}/>
+      </Innercontainer>
+    </Container>
     </div>
   )
 }
