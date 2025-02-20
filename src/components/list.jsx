@@ -1,12 +1,12 @@
 import React from 'react'
 import Fooditem from './Fooditem';
 
-function Foodlist({foodData}) {
+function Foodlist({foodData,setfoodID}) {
   return (
     <div>
         
     {foodData.map((food)=>(
-        <Fooditem fooddata ={food} key={food.title}/>
+        <Fooditem setfoodID={setfoodID} fooddata ={food} key={food.title}/>
       ))}
     </div>
   )

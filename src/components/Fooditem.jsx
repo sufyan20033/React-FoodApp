@@ -1,13 +1,18 @@
 import React from 'react';
 import './Fooditem.css';
 
-function Fooditem({ fooddata }) {
+function Fooditem({fooddata, setfoodID}) {
+  const handleClick = ()=>{
+      
+  }
+  
   return (
     <div className="food-item">
       <h4>{fooddata.title}</h4>
       <img src={fooddata.image} alt={fooddata.title} />
+      {console.log(fooddata)}
       <br />
-      <button>View Recipe</button>
+      <button onClick={()=>{setfoodID(fooddata.id)}}>View Recipe</button>
     </div>
   );
 }
