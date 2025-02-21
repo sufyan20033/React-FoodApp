@@ -38,7 +38,20 @@ function Fooddetail({ foodID }) {
       <img src={food.image} alt={food.title} width="200" />
       <h5>{food.readyInMinutes} Minutes</h5>
       <h5>{food.servings} Person Serving</h5>
+      <h5>{food.pricePerServing} $ / Serving</h5>
+      <p>{food.diets} </p>
       <p>{food.summary.replace(/<\/?[^>]+(>|$)/g, "")}</p>
+      {/* Cooking Instructions Section */}
+      <h3>Cooking Instructions: </h3>
+      {food.analyzedInstructions.length > 0 ? (
+        <ul>
+          {food.analyzedInstructions[0].steps.map((step, index) => (
+            <li key={index}>{step.step}</li>
+          ))}
+        </ul>
+      ) : (
+        <p>No instructions available.</p>
+      )}
       
     </div>
   );
